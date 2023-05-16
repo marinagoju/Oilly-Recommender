@@ -4,6 +4,7 @@ A continuación se muestran las reglas a seguir para trabajar en equipo dentro d
 <br></br>
 1. [Metodología de trabajo con GIT](#id1)
 2. [Pasos para empezar a trabajar](#id2)
+3. [Librerías y recursos utilizados](#id3)
 <br></br>
 
 <div id='id1'/>
@@ -21,7 +22,7 @@ Es importante no alterar en la medida de lo posible las ramas principales, por e
 5. Envía una pull request para mergear tus cambios con la rama original.
 
 
-<div id='id5'/>
+<div id='id3'/>
 <h2>3. Librerías y recursos utilizados</h2>
 
 - Ánimo y paciencia
