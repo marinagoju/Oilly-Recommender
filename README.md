@@ -22,7 +22,7 @@ git clone https://github.com/Oil-vs-Water/Oil-Recycling.git
 
 2. **Ubicate en la rama donde desees trabajar**. Asegúrate que estás dentro del repositorio, de lo contrario introduce "cd " + tecla tab. Luego, introduce el comando de acontinuación para situarte en la rama a partir de la cual vamos a crear la rama personal, por ejemplo "develop":
 ~~~
-git checkout  develop
+git checkout develop
 ~~~
 3. **Crea una rama de trabajo propia donde guardarás tus cambios**. Se recomienda usar nombres en minúsculas, y especificar información del nombre de la rama a partir de la cual se creo y el nombre del desarrollador:
 ~~~
@@ -41,7 +41,7 @@ git push -u origin develop/paco
 git merge develop [ubicado en tu rama personal]
 ~~~
 
-8. **Envía una pull request para mergear los cambios de tu rama con la rama original**. Se realiza a través de la Web de Github y solo para las ramas protegidas.
+7. **Envía una pull request para mergear los cambios de tu rama en la rama original**. Se realiza a través de la Web de Github y solo para las ramas protegidas.
 
 
 <div id='id3'/>
