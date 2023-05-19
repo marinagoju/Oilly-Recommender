@@ -26,7 +26,7 @@ distritos = [
 
 ## FUNCIONES DE UTILIDAD 
 
-ORIGEN_CSV = "Distrito"
+ORIGEN_CSV = "distrito"
 
 def LoadSetCSV(lista):
     '''Función que genera un unico dataframe resultante de la concatenacion de varios csv añadiendo una columna adicional con un
