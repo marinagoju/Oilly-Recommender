@@ -31,14 +31,15 @@ def recomendador(nombre):
 
     SimilDF = pd.DataFrame(data = Simil.toarray(), index=dataset['id'].values,columns=dataset['id'].values)
 
-    Top = 10
+    Top = 1
     nombre_restaurante= nombre
     Num_restaurante = SimilDF.index.get_loc(nombre_restaurante)
     
     RecomendacionItemItem = SimilDF.iloc[(-SimilDF.iloc[:, Num_restaurante]).argsort()[1:(Top+1)].values, Num_restaurante] 
     
-
-    return RecomendacionItemItem
+    for i in RecomendacionItemItem:
+        return i
+    
 
 
 

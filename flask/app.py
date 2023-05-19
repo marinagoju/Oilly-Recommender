@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request
-import pickle
-import numpy as np
 import Recomendador_script as rs
 
 
@@ -16,9 +14,8 @@ def man():
 @app.route('/predict', methods=['POST'])
 def home():
     data1 = request.form['a']
-    arr = np.array([[data1]])
-    pred = rs.recomendador(str(arr))
-    return pred
+    indices = rs.recomendador(str(data1)).index.tolist()
+    return str(indices)
 
 
 if __name__ == "__main__":
