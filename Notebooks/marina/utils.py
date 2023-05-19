@@ -24,14 +24,24 @@ distritos = [
     {"district": "Barajas", "latitude": 40.477628, "longitude": -3.579394}
 ]
 
+## FUNCIONES DE UTILIDAD 
 
-'''
-Aída - 1,2,3 - 'Centro', 'Arganzuela', 'Retiro'
-Carlos - 4,5,6 - 'Salamanca', 'Chamartín', 'Tetuán'
-Marina - 7,8,9 - 'Chamberí', 'Fuencarral-El Pardo', 'Moncloa-Aravaca'
-Fernando - 10,11,12 - 'Latina', 'Carabanchel', 'Usera'
-Víctor - 13,14,15 - 'Puente de Vallecas', 'Moratalaz', 'Ciudad Lineal'
-Richi - 16,17,18 -  'Hortaleza', 'Villaverde', 'Villa de Vallecas'
-Álvaro - 19,20,21 - 'Vicálvaro', 'San Blas-Canillejas', 'Barajas'
+ORIGEN_CSV = "Distrito"
 
-'''
+def LoadSetCSV(lista):
+    '''Función que genera un unico dataframe resultante de la concatenacion de varios csv añadiendo una columna adicional con un
+       codigo identificador del origen de los datos.
+
+    Input (lista): Lista de Tuplas (ruta del archivo csv, codigo identificador de los datos)
+        
+    Output: pd.DataFrame
+    
+    '''
+    import pandas as pd 
+
+    df = pd.DataFrame()    # Los DataFrames que se importan se van concatenando en esta variable.
+    for i in lista:
+        df_loaded = pd.read_csv(i[0])
+        df_loaded[ORIGEN_CSV] = i[1]
+        df = pd.concat([df , df_loaded])
+    return df
