@@ -1,4 +1,4 @@
-import Recomendador_script
+import Recomendador_script as rs
 
 
-recomendador(GV-WXC3F4MUzwjhAH_f_XA)
+print(rs.recomendador(str('7zpK35tqV8uFtg9BGwfbRg')))

@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 sys.path.append(r"Utilities")
 import Utilities 
 
-def recomendador(id):
+def recomendador(nombre):
     dataset=pd.read_csv('df_comerios.csv')
     dataset['combinacion'] = dataset[['description', 'review', 'alias','distrito']].apply(lambda x: ' '.join(x.dropna().astype(str)), axis=1)
     dataset['Descripcion_tok'] = dataset['combinacion'].apply(lambda x: Utilities.tokenizacion(x)) 
@@ -32,10 +32,14 @@ def recomendador(id):
     SimilDF = pd.DataFrame(data = Simil.toarray(), index=dataset['id'].values,columns=dataset['id'].values)
 
     Top = 10
-    nombre_restaurante= id
+    nombre_restaurante= nombre
     Num_restaurante = SimilDF.index.get_loc(nombre_restaurante)
     
     RecomendacionItemItem = SimilDF.iloc[(-SimilDF.iloc[:, Num_restaurante]).argsort()[1:(Top+1)].values, Num_restaurante] 
     
 
     return RecomendacionItemItem
+
+
+
+
