@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import Recomendador_script as rs
+import pickle
 
+model = pickle.load(open('modelo.pkl','rb'))
 
 application = Flask(__name__)
-
 
 
 @application.route('/')
