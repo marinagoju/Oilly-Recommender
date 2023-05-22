@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 import Utilities
-
-model = pickle.load(open('modelo.pkl','rb'))
+import Recomendador_script as rs
 
 application = Flask(__name__)
 
@@ -15,9 +14,10 @@ def man():
 @application.route('/predict', methods=['POST'])
 def home():
     data1 = request.form['a']
-    indices = model(str(data1))
+    indices = rs.recomendador(str(data1))
     solucion= str(indices)
     return solucion
 
     
-application.run()
+if __name__ == "__main__":
+    application.run(debug=True)
