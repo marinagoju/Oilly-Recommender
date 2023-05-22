@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import pickle
+import Utilities
 
 model = pickle.load(open('modelo.pkl','rb'))
 
@@ -14,11 +15,9 @@ def man():
 @application.route('/predict', methods=['POST'])
 def home():
     data1 = request.form['a']
-    indices = model(str(data1)).index.tolist()
-    return indices
+    indices = model(str(data1))
+    solucion= str(indices)
+    return solucion
 
     
-
-
-if __name__ == "__main__":
-    application.run(debug=True)
+application.run()
