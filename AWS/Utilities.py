@@ -1,6 +1,7 @@
 # -*- coding: iso-8859-1 -*-
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
 
 
 import numpy as np
