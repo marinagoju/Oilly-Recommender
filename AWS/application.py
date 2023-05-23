@@ -14,7 +14,7 @@ def man():
 @application.route('/predict', methods=['POST'])
 def home():
     data1 = request.form['a']
-    indices = rs.recomendador(str(data1))
+    indices = rs.recomendador(str(data1)).index.tolist()
     solucion= str(indices)
     return solucion
 
