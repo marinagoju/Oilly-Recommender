@@ -31,7 +31,7 @@ def recomendador(nombre):
 
     SimilDF = pd.DataFrame(data = Simil.toarray(), index=dataset['id'].values,columns=dataset['id'].values)
 
-    Top = 1
+    Top = 7
     nombre_restaurante= nombre
     Num_restaurante = SimilDF.index.get_loc(nombre_restaurante)
     
