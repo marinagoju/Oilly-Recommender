@@ -1,4 +1,4 @@
-![imagen]([https://github.com/Oil-vs-Water/Oil-Recycling/blob/main/img/img_portada.jpg](https://github.com/marinagoju/POC_Project/blob/main/img/portada.jpg))
+![imagen](https://github.com/marinagoju/Oilly-Recommender/blob/main/Utilidades/img_portada.jpg)
 # <div align="center">**NORMAS DE ESCRITURA**</div>  
 A continuación se muestran las reglas a seguir para trabajar en equipo dentro de este repositorio.
 <br></br>
